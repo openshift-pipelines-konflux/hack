@@ -1,5 +1,5 @@
 name: operator
-upstream: tektoncd/operator
+upstream: pb-rh/operator
 components:
   - name: operator
   - name: webhook
@@ -29,7 +29,7 @@ github:
           exit 0
         fi
         # Operator SDK
-        export OPERATOR_SDK_DL_URL=https://github.com/operator-framework/operator-sdk/releases/download/v1.37.0/operator-sdk_linux_amd64
+        export OPERATOR_SDK_DL_URL=https://github.com/operator-framework/operator-sdk/releases/download/v1.39.2/operator-sdk_linux_amd64
         curl -LO ${OPERATOR_SDK_DL_URL}
         chmod +x operator-sdk_linux_amd64 && sudo mv operator-sdk_linux_amd64 /usr/local/bin/operator-sdk
 
@@ -48,7 +48,7 @@ github:
         git checkout HEAD .
         popd
 branches:
-  - name: "release-v1.17.x"
-    upstream: release-v0.74.x
+  - name: main
+    upstream: main
     versions:
-      - "1.17"
+      - main
