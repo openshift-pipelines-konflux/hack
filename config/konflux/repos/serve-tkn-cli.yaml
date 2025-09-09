@@ -6,7 +6,9 @@ components:
       {"type": "generic", "path": ".konflux/prefetch"}
 
 branches:
-  - name: next
+#  - name: next
+#    versions:
+#      - next
+  - name: pipelines-1.20-rhel-9
     versions:
-      - next
-      - "1.18"
+      - "1.20"
