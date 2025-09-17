@@ -1,14 +1,15 @@
 name: serve-tkn-cli
-url: https://gitlab.cee.redhat.com/tekton/p12n.git
+url: https://gitlab.cee.redhat.com/tekton/serve-tkn-cli.git
 components:
   - name: serve-tkn-cli
     prefetch-input: |
       {"type": "generic", "path": ".konflux/prefetch"}
-
+tekton:
+  watched-sources: '"***".pathChanged()'
 branches:
 #  - name: next
 #    versions:
 #      - next
-  - name: pipelines-1.20-rhel-9
+  - name: release-v1.20.x
     versions:
       - "1.20"

@@ -10,3 +10,4 @@ versions:
     auto-release: true
 resources:
   - serve-tkn-cli
+#  - operator-bundle

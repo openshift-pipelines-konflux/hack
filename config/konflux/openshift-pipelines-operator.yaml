@@ -4,5 +4,11 @@ versions:
     version: next
     image-suffix: -rhel9
     auto-release: true
+  "1.20":
+    version: "1.20"
+    image-suffix: -rhel9
+    auto-release: true
 resources:
   - operator
+
+

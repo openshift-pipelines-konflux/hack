@@ -1,9 +1,7 @@
-name: operator 
-upstream: tektoncd/operator
+name: operator-bundle
+url: https://github.com/openshift-pipelines/serve-tkn-cli.git
+#upstream: tektoncd/operator
 components:
-  - name: operator
-  - name: webhook
-  - name: proxy
   - name: bundle
     dockerfile: .konflux/olm-catalog/bundle/Dockerfile
     nudges:
@@ -14,6 +12,7 @@ components:
       - operator-{{hyphenize .Version.Version}}-index-4-16
       - operator-{{hyphenize .Version.Version}}-index-4-17
       - operator-{{hyphenize .Version.Version}}-index-4-18
+      - operator-{{hyphenize .Version.Version}}-index-4-19
     tekton:
       watched-sources: (".konflux/patches/***".pathChanged() || ".konflux/olm-catalog/bundle/***".pathChanged())
 tekton:
@@ -51,7 +50,7 @@ github:
         popd
 branches:
   - name: next
-    upstream: main
+#    upstream: main
     versions:
       - next
       - "1.20"

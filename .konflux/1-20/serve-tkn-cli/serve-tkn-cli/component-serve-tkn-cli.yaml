@@ -13,6 +13,6 @@ spec:
   - operator-1-20-bundle
   source:
     git:
-      url: https://gitlab.cee.redhat.com/tekton/p12n.git
+      url: https://gitlab.cee.redhat.com/tekton/serve-tkn-cli.git
       dockerfileUrl: .konflux/dockerfiles/serve-tkn-cli.Dockerfile
-      revision: pipelines-1.20-rhel-9
+      revision: release-v1.20.x
