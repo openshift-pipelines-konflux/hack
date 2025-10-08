@@ -10,9 +10,25 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  update-projects:
-    if: github.repository_owner == 'openshift-pipelines' # do not run this elsewhere
+  build-matrix:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+      - id: set-matrix
+        run: |
+          APPLICATIONS=$(ls config/konflux/openshift-pipelines-*.yaml | jq -R -s -c 'split("\n")[:-1]')
+          echo "applications: $(echo ${APPLICATIONS} | jq)"
+          echo "applications=${APPLICATIONS}" >> $GITHUB_OUTPUT
+    outputs:
+      applications: ${{ steps.set-matrix.outputs.applications }}
+  update-projects:
+    needs: build-matrix
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        application: ${{ fromJSON(needs.build-matrix.outputs.applications) }}
     permissions:
       contents: write
       pull-requests: write
@@ -24,21 +40,13 @@ jobs:
         go-version: 1.22.x
     - name: Generate configurations and pull-requests
       run: |
-        echo "Let's go"
         gh auth status
         gh auth setup-git
         
-        go run ./cmd/konflux/ config/konflux/openshift-pipelines-core.yaml
-        go run ./cmd/konflux/ config/konflux/openshift-pipelines-cli.yaml
-        go run ./cmd/konflux/ config/konflux/openshift-pipelines-operator.yaml
-        go run ./cmd/konflux/ config/konflux/openshift-pipelines-index-4.15.yaml 
-        go run ./cmd/konflux/ config/konflux/openshift-pipelines-index-4.16.yaml 
-        go run ./cmd/konflux/ config/konflux/openshift-pipelines-index-4.17.yaml 
-        go run ./cmd/konflux/ config/konflux/openshift-pipelines-index-4.18.yaml
-        go run ./cmd/konflux/ config/konflux/openshift-pipelines-index-4.19.yaml
+        go run ./cmd/konflux/ ${{matrix.application}}
       env:
-        GH_TOKEN: ${{ secrets.OPENSHIFT_PIPELINES_ROBOT }}
-        GITHUB_TOKEN: ${{ secrets.OPENSHIFT_PIPELINES_ROBOT }}
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Commit new changes
       run: |
         BASE_BRANCH=${GITHUB_REF#refs/heads/}
