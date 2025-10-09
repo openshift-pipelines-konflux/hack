@@ -1,0 +1,5 @@
+name: tektoncd-git-clone
+upstream: tektoncd-catalog/git-clone
+components:
+  - name: git-init
+    no-image-prefix: true

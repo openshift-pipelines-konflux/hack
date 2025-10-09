@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5326ef9d-0212-4f6a-884d-c9bf2d3465b1" name="Changes" comment="Add 4.19 index and remove 4.12, 4.13, 4.14">
+      <change afterPath="$PROJECT_DIR$/cmd/konflux/newmain.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/konflux.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-cli/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-cli/opc/component-opc.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-cli/opc/image-opc.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-cli/release-plan.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-cli/release-tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-cli/role.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-cli/service-account.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-cli/tektoncd-cli/component-cli-tkn.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-cli/tektoncd-cli/image-cli-tkn.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-cli/tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/console-plugin/component-console-plugin.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/console-plugin/image-console-plugin.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/manual-approval-gate/component-manual-approval-gate-controller.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/manual-approval-gate/component-manual-approval-gate-webhook.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/manual-approval-gate/image-manual-approval-gate-controller.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/manual-approval-gate/image-manual-approval-gate-webhook.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/opc/component-opc.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/opc/image-opc.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/pac-downstream/component-pipelines-as-code-cli.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/pac-downstream/component-pipelines-as-code-controller.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/pac-downstream/component-pipelines-as-code-watcher.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/pac-downstream/component-pipelines-as-code-webhook.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/pac-downstream/image-pipelines-as-code-cli.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/pac-downstream/image-pipelines-as-code-controller.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/pac-downstream/image-pipelines-as-code-watcher.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/pac-downstream/image-pipelines-as-code-webhook.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/release-plan.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/release-tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/role.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/service-account.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tekton-assist/component-tekton-assist.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tekton-assist/image-tekton-assist.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tekton-caches/component-cache.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tekton-caches/image-cache.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-chains/component-chains-controller.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-chains/image-chains-controller.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-cli/component-cli-tkn.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-cli/image-cli-tkn.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-git-clone/component-git-init.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-git-clone/image-git-init.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-hub/component-hub-api.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-hub/component-hub-db-migration.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-hub/component-hub-ui.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-hub/image-hub-api.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-hub/image-hub-db-migration.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-hub/image-hub-ui.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/component-pipeline-controller.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/component-pipeline-entrypoint.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/component-pipeline-events.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/component-pipeline-nop.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/component-pipeline-resolvers.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/component-pipeline-sidecarlogresults.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/component-pipeline-webhook.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/component-pipeline-workingdirinit.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/image-pipeline-controller.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/image-pipeline-entrypoint.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/image-pipeline-events.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/image-pipeline-nop.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/image-pipeline-resolvers.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/image-pipeline-sidecarlogresults.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/image-pipeline-webhook.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pipeline/image-pipeline-workingdirinit.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pruner/component-pruner-controller.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-pruner/image-pruner-controller.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-results/component-results-api.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-results/component-results-retention-policy-agent.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-results/component-results-watcher.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-results/image-results-api.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-results/image-results-retention-policy-agent.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-results/image-results-watcher.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-triggers/component-triggers-controller.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-triggers/component-triggers-core-interceptors.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-triggers/component-triggers-eventlistenersink.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-triggers/component-triggers-webhook.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-triggers/image-triggers-controller.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-triggers/image-triggers-core-interceptors.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-triggers/image-triggers-eventlistenersink.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tektoncd-triggers/image-triggers-webhook.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-core/tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.12/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.12/operator/component-index-4.12.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.12/operator/image-index-4.12.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.12/release-plan.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.12/release-tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.12/role.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.12/service-account.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.12/tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.14/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.14/operator/component-index-4.14.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.14/operator/image-index-4.14.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.14/release-plan.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.14/release-tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.14/role.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.14/service-account.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.14/tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.15/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.15/operator/component-index-4.15.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.15/operator/image-index-4.15.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.15/release-plan.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.15/release-tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.15/role.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.15/service-account.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.15/tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.16/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.16/operator/component-index-4.16.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.16/operator/image-index-4.16.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.16/release-plan.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.16/release-tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.16/role.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.16/service-account.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.16/tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.17/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.17/operator/component-index-4.17.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.17/operator/image-index-4.17.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.17/release-plan.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.17/release-tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.17/role.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.17/service-account.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.17/tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.18/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.18/operator/component-index-4.18.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.18/operator/image-index-4.18.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.18/release-plan.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.18/release-tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.18/role.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.18/service-account.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.18/tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.19/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.19/operator/component-index-4.19.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.19/operator/image-index-4.19.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.19/release-plan.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.19/release-tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.19/role.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.19/service-account.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-index-4.19/tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-operator/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-operator/operator/component-operator-bundle.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-operator/operator/component-operator-operator.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-operator/operator/component-operator-proxy.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-operator/operator/component-operator-webhook.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-operator/operator/image-operator-bundle.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-operator/operator/image-operator-operator.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-operator/operator/image-operator-proxy.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-operator/operator/image-operator-webhook.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-operator/release-plan.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-operator/release-tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-operator/role.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-operator/service-account.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.konflux/next/openshift-pipelines-operator/tests.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/git.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/git.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/go-templates.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/go-templates.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/konflux/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/run.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/run.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/github/workflows/auto-merge-upstream.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/github/workflows/auto-merge-upstream.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/github/workflows/update-sources.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/github/workflows/update-sources.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/konflux/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/konflux/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/konflux/component.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/konflux/component.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/konflux/image.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/konflux/image.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/konflux/release-plan.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/konflux/release-plan.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/konflux/release-tests.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/konflux/release-tests.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/konflux/role.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/konflux/role.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/konflux/secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/konflux/secret.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/konflux/service-account.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/konflux/service-account.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/konflux/tests-on-push.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/konflux/tests-on-push.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/konflux/tests.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/konflux/tests.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/tekton/boussole.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/tekton/boussole.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/tekton/component-pull-request.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/tekton/component-pull-request.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/konflux/templates/tekton/component-push.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/tekton/component-push.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/openshift-pipelines-cli.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/applications/openshift-pipelines-cli.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/openshift-pipelines-core.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/applications/openshift-pipelines-core.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/openshift-pipelines-index-4.15.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/applications/openshift-pipelines-index-4.15.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/openshift-pipelines-index-4.16.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/applications/openshift-pipelines-index-4.16.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/openshift-pipelines-index-4.17.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/applications/openshift-pipelines-index-4.17.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/openshift-pipelines-index-4.18.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/applications/openshift-pipelines-index-4.18.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/openshift-pipelines-index-4.19.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/applications/openshift-pipelines-index-4.19.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/openshift-pipelines-operator.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/applications/openshift-pipelines-operator.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/console-plugin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/console-plugin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/git-init.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/git-init.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/manual-approval-gate.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/manual-approval-gate.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/opc.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/opc.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/operator-index-4.15.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/operator-index-4.15.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/operator-index-4.16.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/operator-index-4.16.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/operator-index-4.17.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/operator-index-4.17.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/operator-index-4.18.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/operator-index-4.18.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/operator-index-4.19.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/operator-index-4.19.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/operator.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/operator.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/pac-downstream.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/pac-downstream.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/tekton-assist.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/tekton-assist.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/tekton-caches.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/tekton-caches.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/tekton-kueue.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/tekton-kueue.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/tektoncd-chains.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/tektoncd-chains.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/tektoncd-cli.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/tektoncd-cli.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/tektoncd-hub.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/tektoncd-hub.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/tektoncd-pipeline.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/tektoncd-pipeline.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/tektoncd-pruner.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/tektoncd-pruner.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/tektoncd-results.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/tektoncd-results.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/konflux/repos/tektoncd-triggers.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/repos/tektoncd-triggers.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/task-buildpacks.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/task-containers.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/task-git.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/task-maven.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/task-openshift.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/konflux/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/config.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file:///opt/homebrew/opt/go/libexec" />
+  <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="release-v1.20.x" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="325z0JtrQvEfmAeRoyAcGQHv4b4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Go Build.go build github.com/openshift-pipelines/hack/cmd/konflux.executor": "Run",
+    "KUBERNETES_SUPPRESS_CONFIG_CLUSTER_SUGGESTION": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.GoLinterPluginOnboarding": "true",
+    "RunOnceActivity.GoLinterPluginStorageMigration": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "next",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/pramodbindal/github/hack/cmd/konflux",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.general"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cmd/konflux" />
+      <recent name="$PROJECT_DIR$/config/konflux/repos" />
+      <recent name="$PROJECT_DIR$/config/konflux" />
+      <recent name="$PROJECT_DIR$/config/release/next/stage" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/internal/konflux" />
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/config/applications" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="go build github.com/openshift-pipelines/hack/cmd/konflux" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="hack" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/openshift-pipelines/hack/cmd/konflux" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/cmd/konflux/newmain.go" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/openshift-pipelines/hack/cmd/konflux" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-f466f9b0953e-3d2cccfc42a2-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-252.23892.449" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-GO-252.23892.449" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5326ef9d-0212-4f6a-884d-c9bf2d3465b1" name="Changes" comment="" />
+      <created>1756724996707</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756724996707</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add 4.19 index and remove 4.12, 4.13, 4.14" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add 4.19 index and remove 4.12, 4.13, 4.14" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/cmd/konflux/newmain.go</url>
+          <line>40</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/internal/konflux/config.go</url>
+          <line>42</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/cmd/konflux/newmain.go</url>
+          <line>30</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

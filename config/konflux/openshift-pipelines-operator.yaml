@@ -1,8 +1,0 @@
-name: openshift-pipelines-operator
-versions:
-  next:
-    version: next
-    image-suffix: -rhel9
-    auto-release: true
-resources:
-  - operator

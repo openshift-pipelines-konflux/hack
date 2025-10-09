@@ -1,0 +1,19 @@
+name: openshift-pipelines-core
+
+repos:
+#  - console-plugin
+#  - git-init
+#  - manual-approval-gate
+#  - pac-downstream
+#  - tekton-caches
+#  - tektoncd-chains
+#  - tektoncd-hub
+#  - tekton-kueue
+#  - tektoncd-pipeline
+#  - tektoncd-pruner
+#  - tektoncd-results
+  - tektoncd-triggers
+#  - tekton-assist
+#  - tekton-kueue
+  - tektoncd-pruner
+

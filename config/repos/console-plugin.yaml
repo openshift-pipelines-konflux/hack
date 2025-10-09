@@ -1,0 +1,7 @@
+name: console-plugin
+components:
+  - name: console-plugin
+    prefetch-input: |-
+      [{"type": "rpm", "path": ".konflux/rpms"}, {"type": "yarn"}]
+tekton:
+  watched-sources: '"***".pathChanged()'

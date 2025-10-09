@@ -1,0 +1,9 @@
+name: tektoncd-cli
+upstream: tektoncd/cli
+components:
+  - name: tkn
+branches:
+  - name: next
+    upstream: release-v0.42.0
+    versions:
+      - next

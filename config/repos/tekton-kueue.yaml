@@ -1,0 +1,6 @@
+name: tekton-kueue
+components:
+  - name: kueue
+    image-prefix: tekton-
+    prefetch-input: |
+      {"type": "gomod", "path": "upstream"}
