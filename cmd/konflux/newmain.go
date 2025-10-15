@@ -23,13 +23,15 @@ func main() {
 	for _, version := range config.Versions {
 		for _, applicationName := range config.Applications {
 			// Read application using the generic readResource function
-			application, err := readApplication(configDir, applicationName, &version)
+			applications, err := readApplications(configDir, applicationName, &version)
 			if err != nil {
 				log.Fatal(err)
 			}
-			log.Printf("Loaded application: %s", application.Name)
-			if err := k.GenerateConfig(application); err != nil {
-				log.Fatal(err)
+			for _, application := range applications {
+				log.Printf("Loaded application: %s", application.Name)
+				if err := k.GenerateConfig(application); err != nil {
+					log.Fatal(err)
+				}
 			}
 
 		}
@@ -57,32 +59,36 @@ func readResource[T any](dir, resourceType, resourceName string) (T, error) {
 }
 
 // Helper functions using the generic readResource function
-func readApplication(dir, applicationName string, version *k.Version) (k.Application, error) {
+func readApplications(dir, applicationName string, version *k.Version) ([]k.Application, error) {
 
 	log.Printf("Reading application: %s", applicationName)
-	applicationConfig, err := readResource[k.ApplicationConfig](dir, "applications", applicationName)
+	applicationConfigs, err := readResource[[]k.ApplicationConfig](dir, "applications", applicationName)
 
 	if err != nil {
-		return k.Application{}, err
+		return []k.Application{}, err
 	}
-	application := k.Application{
-		Name:       applicationName,
-		Components: []k.Component{},
-		Version:    version,
-	}
+	applications := []k.Application{}
 
-	for _, repoName := range applicationConfig.Repositories {
-		repo, err := readRepository(dir, repoName, &application)
-		if err != nil {
-			return k.Application{}, err
+	for _, applicationConfig := range applicationConfigs {
+		application := k.Application{
+			Name:       applicationConfig.Name,
+			Components: []k.Component{},
+			Version:    version,
 		}
-		application.Components = append(application.Components, repo.Components...)
-		application.Repositories = append(application.Repositories, repo)
+		for _, repoName := range applicationConfig.Repositories {
+			repo, err := readRepository(dir, repoName, &application)
+			if err != nil {
+				return []k.Application{}, err
+			}
+			application.Components = append(application.Components, repo.Components...)
+			application.Repositories = append(application.Repositories, repo)
 
-		log.Printf("Loaded repository: %s", repo.Name)
+			log.Printf("Loaded repository: %s", repo.Name)
+		}
+		applications = append(applications, application)
+
 	}
-
-	return application, nil
+	return applications, nil
 }
 
 func updateRepository(repo *k.Repository, a k.Application) error {

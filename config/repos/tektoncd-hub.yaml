@@ -6,9 +6,3 @@ components:
   - name: ui
     prefetch-input: |-
       [{"type": "npm", "path": "upstream/ui"}, {"type": "rpm", "path": ".konflux/rpms"}]
-branches:
-  # - name: main
-  - name: next
-    upstream: release-v1.22.3
-    versions:
-      - next

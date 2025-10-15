@@ -7,7 +7,4 @@ components:
     image-prefix: manual-approval-gate-
 tekton:
   watched-sources: '"***".pathChanged()'
-branches:
-  - name: release-v0.6.0
-    versions:
-      - next
+

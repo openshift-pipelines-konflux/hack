@@ -10,12 +10,6 @@ import (
 )
 
 func GenerateConfig(application Application) error {
-	if err := os.RemoveAll(tektonDir); err != nil {
-		return err
-	}
-	if err := os.RemoveAll(konfluxDir); err != nil {
-		return err
-	}
 	if err := generateKonfluxConfig(application); err != nil {
 		return err
 	}
@@ -95,6 +89,11 @@ func generateGitHubConfig(repo Repository, targetDir string) error {
 func generateKonfluxConfig(application Application) error {
 	targetDir := filepath.Join(konfluxDir, hyphenize(application.Version.Version), application.Name)
 
+	log.Printf("Delete Konflux dir in %s\n", targetDir)
+	if err := os.RemoveAll(targetDir); err != nil {
+		return err
+	}
+
 	if err := generateKonfluxApplication(application, targetDir); err != nil {
 		return err
 	}
@@ -102,12 +101,18 @@ func generateKonfluxConfig(application Application) error {
 	if err := generateKonfluxComponents(application, targetDir); err != nil {
 		return err
 	}
-	
+
 	return nil
 }
 
 func generateKonfluxApplication(application Application, targetDir string) error {
 	if err := generateFileFromTemplate("application.yaml", application, filepath.Join(targetDir, "application.yaml"), application); err != nil {
+		return err
+	}
+	if err := generateFileFromTemplate("release-plan.yaml", application, filepath.Join(targetDir, "release-plan.yaml"), application); err != nil {
+		return err
+	}
+	if err := generateFileFromTemplate("tests.yaml", application, filepath.Join(targetDir, "tests.yaml"), application); err != nil {
 		return err
 	}
 
@@ -117,10 +122,11 @@ func generateKonfluxApplication(application Application, targetDir string) error
 func generateKonfluxComponents(application Application, targetDir string) error {
 	log.Printf("Generate %s konflux configuration in %s\n", application.Name, targetDir)
 	for _, c := range application.Components {
-		if err := generateFileFromTemplate("component.yaml", c, filepath.Join(targetDir, fmt.Sprintf("component-%s%s.yaml", c.ImagePrefix, c.Name)), application); err != nil {
+		componentDir := filepath.Join(targetDir, c.Repository.Name)
+		if err := generateFileFromTemplate("component.yaml", c, filepath.Join(componentDir, fmt.Sprintf("component-%s%s.yaml", c.ImagePrefix, c.Name)), application); err != nil {
 			return err
 		}
-		if err := generateFileFromTemplate("image.yaml", c, filepath.Join(targetDir, fmt.Sprintf("image-%s%s.yaml", c.ImagePrefix, c.Name)), application); err != nil {
+		if err := generateFileFromTemplate("image.yaml", c, filepath.Join(componentDir, fmt.Sprintf("image-%s%s.yaml", c.ImagePrefix, c.Name)), application); err != nil {
 			return err
 		}
 	}

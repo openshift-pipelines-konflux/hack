@@ -3,7 +3,3 @@ components:
   - name: tekton-assist
 tekton:
   watched-sources: '"***".pathChanged()'
-branches:
-  - name: next
-    versions:
-      - next

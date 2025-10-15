@@ -1,11 +1,6 @@
 name: tekton-caches
+upstream: openshift-pipeline/tekton-caches
 components:
   - name: cache
 tekton:
   watched-sources: '"***".pathChanged()'
-branches:
-  # uncomment below line to get nightly builds
-  # - name: main
-  - name: main
-    versions:
-      - next

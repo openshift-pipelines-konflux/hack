@@ -5,7 +5,3 @@ components:
     nudges: [ "" ]
 tekton:
   watched-sources: ( ".konflux/olm-catalog/index/***".pathChanged())
-branches:
-  - name: next
-    versions:
-      - next

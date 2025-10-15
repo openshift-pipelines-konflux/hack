@@ -36,7 +36,7 @@ spec:
   - name: revision
     value: '{{"{{revision}}"}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads/tekton-ecosystem-tenant/{{hyphenize .Version.Version}}/{{.ImagePrefix}}{{.Name}}{{.ImageSuffix}}:{{"{{revision}}"}}
+    value: quay.io/redhat-user-workloads/tekton-ecosystem-tenant/{{.ImagePrefix}}{{.Name}}{{.ImageSuffix}}:{{"{{revision}}"}}
   - name: dockerfile
     value: {{.Dockerfile}}
   {{- if contains (printf "%s-%s-%s" (basename .Repository.Name | hyphenize) (hyphenize .Version.Version) .Name) "bundle" }}

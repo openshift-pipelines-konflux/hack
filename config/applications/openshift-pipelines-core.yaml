@@ -1,19 +1,18 @@
-name: openshift-pipelines-core
-
-repos:
-#  - console-plugin
-#  - git-init
-#  - manual-approval-gate
-#  - pac-downstream
-#  - tekton-caches
-#  - tektoncd-chains
-#  - tektoncd-hub
-#  - tekton-kueue
-#  - tektoncd-pipeline
-#  - tektoncd-pruner
-#  - tektoncd-results
-  - tektoncd-triggers
-#  - tekton-assist
-#  - tekton-kueue
-  - tektoncd-pruner
-
+- name: openshift-pipelines-core
+  repos:
+#    - pipelines-as-code
+#    - tekton-assist
+    - tekton-caches
+    - tekton-kueue
+#    - tektoncd-chains
+#    - tektoncd-hub
+#    - tektoncd-pipeline
+    - tektoncd-pruner
+    - tektoncd-results
+    - tektoncd-triggers
+- name: openshift-pipelines-operator
+  repos:
+    - tektoncd-operator
+#- name: openshift-pipelines-index-4.15
+#  repos:
+#    - operator-index-4.15

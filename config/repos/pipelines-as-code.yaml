@@ -1,4 +1,4 @@
-name: pac-downstream
+name: pipelines-as-code
 upstream: openshift-pipelines/pipelines-as-code
 components:
   - name: controller
@@ -8,8 +8,3 @@ components:
     nudges:
       - operator-{{hyphenize .Version.Version}}-bundle
       - tektoncd-cli-{{hyphenize .Version.Version}}-tkn
-branches:
-  - name: next
-    upstream: release-v0.38.x
-    versions:
-      - next

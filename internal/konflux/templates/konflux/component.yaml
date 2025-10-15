@@ -15,10 +15,10 @@ spec:
   - {{eval $nudge $dot}}
   {{- end }}
   {{- else }}
-  - operator-{{hyphenize .Version.Version}}-bundle
+  - tektoncd-operator-{{hyphenize .Version.Version}}-bundle
   {{- end }}
   source:
     git:
       url: {{.Repository.Url}}
       dockerfileUrl: {{ .Dockerfile }}
-      revision: {{.Repository.Branch}}
+      revision: {{.Repository.Branch.Name}}

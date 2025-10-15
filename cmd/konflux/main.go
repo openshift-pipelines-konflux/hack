@@ -234,8 +234,9 @@ func UpdateComponent(c *k.Component, repo k.Repository, app k.Application) error
 		}
 	}
 	// This is the case for git-init where we don't require upstream name because comet created is pipelines-git-init-rhel8
-	if !c.NoImagePrefix && repo.Upstream != "" {
+	if c.ImagePrefix == "" && !c.NoImagePrefix && repo.Upstream != "" {
 		c.ImagePrefix = strings.Split(repo.Upstream, "/")[1] + "-"
+		log.Printf("Using image prefix: %s", c.ImagePrefix)
 	}
 	return nil
 }

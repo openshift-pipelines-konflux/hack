@@ -2,7 +2,7 @@ applications:
   - openshift-pipelines-core
 
 versions:
-  - version: next
+#  - version: next
   - version: 1.22
     image-suffix: -rhel9
 #  - version: 1.19

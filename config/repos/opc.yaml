@@ -3,7 +3,4 @@ components:
   - name: opc
 tekton:
   watched-sources: '"***".pathChanged()'
-branches:
-  - name:  release-v1.20.x
-    versions:
-      - next
+

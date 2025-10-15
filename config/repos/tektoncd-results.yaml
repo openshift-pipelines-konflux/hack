@@ -4,8 +4,3 @@ components:
   - name: api
   - name: watcher
   - name: retention-policy-agent
-branches:
-  - name: next
-    upstream: release-v0.16.x
-    versions:
-      - next

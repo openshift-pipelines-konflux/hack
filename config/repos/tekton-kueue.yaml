@@ -1,4 +1,5 @@
 name: tekton-kueue
+upstream: konflux-ci/tekton-kueue
 components:
   - name: kueue
     image-prefix: tekton-

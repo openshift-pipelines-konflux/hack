@@ -4,8 +4,3 @@ upstream: tektoncd/pruner
 components:
   - name: controller
     image-prefix: pruner-
-# branches:
-#   - name: next
-#     upstream: main
-#     versions:
-#       - next

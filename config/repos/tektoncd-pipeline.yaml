@@ -9,8 +9,3 @@ components:
   - name: sidecarlogresults
   - name: webhook
   - name: workingdirinit
-branches:
-  - name: next
-    upstream: release-v1.3.x
-    versions:
-      - next
