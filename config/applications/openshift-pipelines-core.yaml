@@ -6,7 +6,7 @@
     - tekton-kueue
 #    - tektoncd-chains
 #    - tektoncd-hub
-#    - tektoncd-pipeline
+    - tektoncd-pipeline
     - tektoncd-pruner
     - tektoncd-results
     - tektoncd-triggers
