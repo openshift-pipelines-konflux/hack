@@ -28,7 +28,7 @@ jobs:
           echo "::set-output name=list::$(cat repos.txt)"
           for repo in $(cat repos.txt); do
             echo "Syncing labels for $repo"
-            gh label sync labels.yml -R openshift-pipelines-konflux/$repo --force
+            gh label clone openshift-pipelines/hack -R openshift-pipelines-konflux/$repo --force
           done
         env:
           GH_TOKEN: ${{ secrets.OPENSHIFT_PIPELINES_ROBOT }}
