@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5326ef9d-0212-4f6a-884d-c9bf2d3465b1" name="Changes" comment="Add 4.19 index and remove 4.12, 4.13, 4.14">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/sync-org-labels.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/sync-org-labels.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/labels.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/labels.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/konflux/templates/tekton/component-push.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/internal/konflux/templates/tekton/component-push.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

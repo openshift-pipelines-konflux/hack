@@ -1,21 +1,13 @@
 # .github/labels.yml
-- name: bug
-  color: d73a4a
-  description: Something isn’t working
-
-- name: enhancement
-  color: a2eeef
-  description: New feature or request
-
-- name: documentation
-  color: 0075ca
-  description: Improvements or additions to documentation
-
-- name: question
+- name: hack
   color: d876e3
-  description: Further information is requested
+  description: PRs Generated from Hack Repo
 
-- name: good first issue
+- name: automated
   color: 7057ff
-  description: Good for newcomers
+  description: For Automated PRs
+
+- name: upstream
+  color: ffbf57
+  description: For Upstream Sync PRs
 
