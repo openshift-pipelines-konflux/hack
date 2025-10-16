@@ -1,6 +1,6 @@
 # .github/labels.yml
 - name: hack
-  color: d876e3
+  color: 44d4c8
   description: PRs Generated from Hack Repo
 
 - name: automated
@@ -8,6 +8,6 @@
   description: For Automated PRs
 
 - name: upstream
-  color: ffbf57
+  color: e89815
   description: For Upstream Sync PRs
 
