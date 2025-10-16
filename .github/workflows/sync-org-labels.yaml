@@ -20,9 +20,9 @@ jobs:
       - name: Sync labels across org repos
         uses: EndBug/label-sync@v2
         with:
-          token: ${{ GH_TOKEN }}
+          token: ${{ secrets.OPENSHIFT_PIPELINES_ROBOT }}
           config-file: '.github/labels.yml'
           source-repo: 'openshift-pipelines-konflux/hack' # Replace ORG with your org name
 
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.OPENSHIFT_PIPELINES_ROBOT }}
