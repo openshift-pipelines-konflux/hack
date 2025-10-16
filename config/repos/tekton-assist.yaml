@@ -1,5 +1,4 @@
 name: tekton-assist
+upstream: openshift-pipelines/tekton-assist
 components:
   - name: tekton-assist
-tekton:
-  watched-sources: '"***".pathChanged()'

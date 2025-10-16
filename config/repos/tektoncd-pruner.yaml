@@ -3,4 +3,3 @@ upstream: tektoncd/pruner
 
 components:
   - name: controller
-    image-prefix: pruner-

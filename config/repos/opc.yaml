@@ -1,6 +1,4 @@
 name: opc
+upstream: openshift-pipelines/opc
 components:
   - name: opc
-tekton:
-  watched-sources: '"***".pathChanged()'
-

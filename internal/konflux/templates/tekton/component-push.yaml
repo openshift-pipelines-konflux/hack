@@ -17,7 +17,7 @@ metadata:
       == "{{.Repository.Branch.Name}}" &&
       ({{.Tekton.WatchedSources}} ||
       "{{.Dockerfile}}".pathChanged() ||
-      {{- if  and (eq .Repository.Branch.Name "main")  (eq .Repository.Name "operator") }} ".tekton/docker-build-ta.yaml".pathChanged() || {{- end }}
+      {{- if  and (eq .Repository.Branch.Name "main")  (eq .Repository.Name "tektoncd-operator") }} ".tekton/*build*.yaml".pathChanged() || {{- end }}
       ".tekton/{{basename .Repository.Name | hyphenize}}-{{hyphenize .Version.Version}}-{{.Name}}-push.yaml".pathChanged())
     {{- if .Tekton.NudgeFiles }}
     build.appstudio.openshift.io/build-nudge-files: "{{.Tekton.NudgeFiles}}"

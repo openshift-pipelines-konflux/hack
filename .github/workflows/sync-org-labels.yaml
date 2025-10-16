@@ -1,0 +1,25 @@
+name: Sync Organization Labels
+on:
+  push:
+    paths:
+      - '.github/labels.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  repository-projects: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Sync labels across org repos
+        uses: EndBug/label-sync@v2
+        with:
+          config-file: '.github/labels.yml'
+          repos: 'openshift-pipelines-konflux//*' # Replace ORG with your org name
+          token: ${{ secrets.GH_TOKEN }}

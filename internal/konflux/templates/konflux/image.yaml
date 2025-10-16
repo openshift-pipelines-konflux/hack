@@ -2,7 +2,7 @@
 apiVersion: appstudio.redhat.com/v1alpha1
 kind: ImageRepository
 metadata:
-  name: {{hyphenize .Version.Version}}-{{.ImagePrefix}}{{.Name}}{{.ImageSuffix}}
+  name: {{.ImagePrefix}}{{hyphenize .Name}}{{hyphenize .ImageSuffix}}
   annotations:
     image-controller.appstudio.redhat.com/update-component-image: "true"
     image-controller.appstudio.redhat.com/skip-repository-deletion: "true"

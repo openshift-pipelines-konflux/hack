@@ -21,9 +21,15 @@ func main() {
 	}
 
 	for _, version := range config.Versions {
+		versionConfig, err := readResource[k.VersionConfig](configDir, "releases", version)
+		if err != nil {
+			log.Fatal(err)
+		}
+		versionConfig.Version.Version = version
+		log.Printf("%v", versionConfig)
 		for _, applicationName := range config.Applications {
 			// Read application using the generic readResource function
-			applications, err := readApplications(configDir, applicationName, &version)
+			applications, err := readApplications(configDir, applicationName, versionConfig)
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -59,7 +65,7 @@ func readResource[T any](dir, resourceType, resourceName string) (T, error) {
 }
 
 // Helper functions using the generic readResource function
-func readApplications(dir, applicationName string, version *k.Version) ([]k.Application, error) {
+func readApplications(dir, applicationName string, versionConfig k.VersionConfig) ([]k.Application, error) {
 
 	log.Printf("Reading application: %s", applicationName)
 	applicationConfigs, err := readResource[[]k.ApplicationConfig](dir, "applications", applicationName)
@@ -67,16 +73,17 @@ func readApplications(dir, applicationName string, version *k.Version) ([]k.Appl
 	if err != nil {
 		return []k.Application{}, err
 	}
-	applications := []k.Application{}
+	var applications []k.Application
 
 	for _, applicationConfig := range applicationConfigs {
 		application := k.Application{
 			Name:       applicationConfig.Name,
 			Components: []k.Component{},
-			Version:    version,
+			Version:    &versionConfig.Version,
 		}
 		for _, repoName := range applicationConfig.Repositories {
-			repo, err := readRepository(dir, repoName, &application)
+			repo, err := readRepository(dir, repoName, &application, versionConfig.Branches[repoName])
+
 			if err != nil {
 				return []k.Application{}, err
 			}
@@ -97,16 +104,23 @@ func updateRepository(repo *k.Repository, a k.Application) error {
 	repository := fmt.Sprintf("https://github.com/%s/%s.git", GithubOrg, repo.Name)
 	repo.Url = repository
 
-	branch := k.Branch{}
+	var branchName, upstreamBranch string
 
-	if a.Version.Version == "next" {
-		branch.Name = "main"
-		branch.UpstreamBranch = "main"
+	if a.Version.Version == "main" || a.Version.Version == "next" {
+		branchName = "main"
+		upstreamBranch = "main"
 	} else {
-		branch.Name = "release-v" + a.Version.Version + ".x"
-		branch.UpstreamBranch = "main"
+		branchName = "release-v" + a.Version.Version + ".x"
+		upstreamBranch = "main"
 	}
-	repo.Branch = branch
+
+	branch := &repo.Branch
+	if branch.Name == "" {
+		branch.Name = branchName
+	}
+	if branch.UpstreamBranch == "" {
+		branch.UpstreamBranch = upstreamBranch
+	}
 
 	// Tekton
 	if repo.Tekton == (k.Tekton{}) {
@@ -121,12 +135,13 @@ func updateRepository(repo *k.Repository, a k.Application) error {
 }
 
 // readRepository reads a repository resource from the repos directory
-func readRepository(dir, repoName string, app *k.Application) (k.Repository, error) {
+func readRepository(dir, repoName string, app *k.Application, branch k.Branch) (k.Repository, error) {
 	repository, err := readResource[k.Repository](dir, "repos", repoName)
 	if err != nil {
 		return k.Repository{}, err
 	}
 
+	repository.Branch = branch
 	if err := updateRepository(&repository, *app); err != nil {
 		return k.Repository{}, err
 	}

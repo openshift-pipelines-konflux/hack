@@ -1,7 +1,0 @@
-branches-config:
-  version: 1.19
-  - repo: tekton-pruner
-    upstream: main
-  - repo: tekton-kueue
-    upstream: main
-    

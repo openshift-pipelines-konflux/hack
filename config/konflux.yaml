@@ -1,26 +1,6 @@
 applications:
-  - openshift-pipelines-core
+  - core
+  - index
 
 versions:
-#  - version: next
-  - version: 1.22
-    image-suffix: -rhel9
-#  - version: 1.19
-#    image-suffix: -rhel9
-#  - version: 1.20
-#    image-suffix: -rhel9
-#  - version: 1.21
-#    image-suffix: -rhel9
-#  - version: 1.22
-#    image-suffix: -rhel9
-
-
-#repos:
-#  - name  : tekton-pruner
-#    version: next
-#    branch:
-#      name: next
-#      upstream: release-v0.0.x
-
-
-    
+  - main
