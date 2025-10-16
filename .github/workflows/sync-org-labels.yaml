@@ -22,7 +22,7 @@ jobs:
         with:
           token: ${{ secrets.OPENSHIFT_PIPELINES_ROBOT }}
           config-file: '.github/labels.yml'
-          source-repo: 'openshift-pipelines-konflux/hack' # Replace ORG with your org name
+#          source-repo: 'openshift-pipelines-konflux/hack' # Replace ORG with your org name
 
         env:
           GH_TOKEN: ${{ secrets.OPENSHIFT_PIPELINES_ROBOT }}
