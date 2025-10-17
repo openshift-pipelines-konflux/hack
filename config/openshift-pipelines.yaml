@@ -1,0 +1,6 @@
+organization: openshift-pipelines-konflux
+applications:
+  - core
+  - index
+versions:
+  - main

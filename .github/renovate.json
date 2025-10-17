@@ -1,5 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>konflux-ci/mintmaker//config/renovate/renovate.json"
+  ],
   "branchPrefix": "konflux/osp-mintmaker/",
   "enabledManagers": [
     "tekton",
@@ -12,13 +15,11 @@
     "konflux",
     "mintmaker"
   ],
+  "autoApprove": true,
   "packageRules": [
     {
-      "description": " {{.Name}} - Automerge non-major updates",
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
+      "description": "Automerge non-major updates",
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
     }
   ]
