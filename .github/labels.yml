@@ -18,3 +18,9 @@
 - name: dependencies
   color: fbca04
   description: Pull requests that update a dependency file
+- name: approved
+  color: 0e8a16
+  description: Label for Approved PRs
+- name: lgtm
+  color: 8ad71a
+  description: Looks Good to Me Label
