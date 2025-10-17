@@ -1,8 +1,8 @@
 name: Sync Organization Labels
 on:
   push:
-  #    paths:
-  #      - '.github/labels.yml'
+    paths:
+      - '.github/labels.yml'
   workflow_dispatch:
 
 permissions:
