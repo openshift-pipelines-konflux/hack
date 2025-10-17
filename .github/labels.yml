@@ -11,7 +11,10 @@
   color: e89815
   description: For Upstream Sync PRs
 
-
 - name: konflux
   color: 1161f5
   description: For Konflux PRs
+
+- name: dependencies
+  color: fbca04
+  description: Pull requests that update a dependency file

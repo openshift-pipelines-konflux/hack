@@ -91,6 +91,10 @@ func generateGitHubConfig(repo Repository, targetDir string) error {
 	if err := generateFileFromTemplate("update-sources.yaml", repo, filepath.Join(target, "workflows", filename), repo.Application); err != nil {
 		return err
 	}
+	_, err := run(context.Background(), ".github", "cp", "renovate.json", target)
+	if err != nil {
+		return err
+	}
 
 	return nil
 }
